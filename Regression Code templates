@@ -1,0 +1,93 @@
+// This repo is in Python language and is majorly for my recruiting process in MFC-VIT in ML domain. Hope this helps anybody in need.
+
+//1. Simple Linear Regression
+//CODE:
+from sklearn.linear_model import LinearRegression
+
+# Create a Linear Regression object
+regression = LinearRegression()
+
+# Fit the model to the training data
+regression.fit(X_train, y_train)
+
+# Predict on the test data
+y_pred = regression.predict(X_test)
+
+
+//2. Mutilple Linear Regression
+//CODE:
+from sklearn.linear_model import LinearRegression
+
+# Create a Linear Regression object
+regression = LinearRegression()
+
+# Fit the model to the training data
+regression.fit(X_train, y_train)
+
+# Predict on the test data
+y_pred = regression.predict(X_test)
+
+
+//3. Polynomial Regression
+//CODE:
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.linear_model import LinearRegression
+
+# Create polynomial features
+poly_features = PolynomialFeatures(degree=degree)
+X_poly = poly_features.fit_transform(X)
+
+# Create a Linear Regression object
+regression = LinearRegression()
+
+# Fit the model to the polynomial features
+regression.fit(X_poly, y)
+
+# Predict on the test data
+X_test_poly = poly_features.transform(X_test)
+y_pred = regression.predict(X_test_poly)
+
+
+//4. Logistic Regression
+//CODE:
+from sklearn.linear_model import LogisticRegression
+
+# Create a Logistic Regression object
+logreg = LogisticRegression()
+
+# Fit the model to the training data
+logreg.fit(X_train, y_train)
+
+# Predict probabilities on the test data
+y_pred_proba = logreg.predict_proba(X_test)
+
+# Predict classes on the test data
+y_pred = logreg.predict(X_test)
+
+
+//5. Decision Tree Regression
+//CODE:
+from sklearn.tree import DecisionTreeRegressor
+
+# Create a Decision Tree Regression object
+regression = DecisionTreeRegressor()
+
+# Fit the model to the training data
+regression.fit(X_train, y_train)
+
+# Predict on the test data
+y_pred = regression.predict(X_test)
+
+
+//6. Random Forest Regression
+//CODE:
+from sklearn.ensemble import RandomForestRegressor
+
+# Create a Random Forest Regression object
+regression = RandomForestRegressor()
+
+# Fit the model to the training data
+regression.fit(X_train, y_train)
+
+# Predict on the test data
+y_pred = regression.predict(X_test)
